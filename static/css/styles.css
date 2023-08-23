@@ -1,0 +1,72 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the header */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Styling for the menu button */
+#menu-button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Styling for the menu button on hover */
+#menu-button:hover {
+    background-color: #777;
+}
+
+/* Basic styling for the main content */
+main {
+    padding: 20px;
+}
+
+/* Basic styling for the footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+/* Style the individual pages */
+/* Add more specific styling for each page */
+
+/* Add this to your existing CSS */
+/* Styles for the header when the menu is open */
+header.menu-open {
+    background-color: #555; /* Change background color when menu is open */
+}
+
+/* Add this to your existing CSS */
+/* Styles for the menu container */
+nav {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    width: 100%;
+    text-align: center;
+}
+
+/* Styles for the menu links */
+nav a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Styles for the menu container when open */
+nav.menu-open {
+    display: block;
+}
