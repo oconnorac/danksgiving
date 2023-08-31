@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mt-4">Room Arrangements Page</h2>
+    <p>Here are the room arrangements available:</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="list-group">
+                {% for room_type, arrangement in room_arrangements.items() %}
+                    <li class="list-group-item">
+                        <strong>{{ room_type }}:</strong>
+                        <p>{{ arrangement }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

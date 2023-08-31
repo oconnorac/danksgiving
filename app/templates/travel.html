@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mt-4">Travel Arrangements Page</h2>
+    <p>Here are the travel arrangements for each guest:</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="list-group">
+                {% for guest, arrangements in travel_arrangements.items() %}
+                    <li class="list-group-item">
+                        <strong>{{ guest }}:</strong>
+                        <p>Arrival: {{ arrangements['Arrival'] }}</p>
+                        <p>Departure: {{ arrangements['Departure'] }}</p>
+                        <p>Means of Transport: {{ arrangements['means_of_transport'] }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

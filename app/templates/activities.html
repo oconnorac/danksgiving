@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mt-4">Activities Page</h2>
+    <p>Here are the activities for the week:</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="list-group">
+                {% for day, activities_list in activities.items() %}
+                    <li class="list-group-item">
+                        <strong>{{ day }}:</strong>
+                        <ul>
+                            {% for activity in activities_list %}
+                                <li>{{ activity }}</li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

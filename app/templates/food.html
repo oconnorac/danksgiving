@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mt-4">Food Page</h2>
+    <p>Here are the meals for the week:</p>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Breakfast</h3>
+            <ul class="list-group">
+                {% for day, meals in food.items() %}
+                    <li class="list-group-item">
+                        <strong>{{ day }}:</strong>
+                        <ul>
+                            {% for meal, foods in meals.items() %}
+                                {% if meal == 'Breakfast' %}
+                                    {% for food in foods %}
+                                        <li>{{ food }}</li>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h3>Lunch</h3>
+            <ul class="list-group">
+                {% for day, meals in food.items() %}
+                    <li class="list-group-item">
+                        <strong>{{ day }}:</strong>
+                        <ul>
+                            {% for meal, foods in meals.items() %}
+                                {% if meal == 'Lunch' %}
+                                    {% for food in foods %}
+                                        <li>{{ food }}</li>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h3>Dinner</h3>
+            <ul class="list-group">
+                {% for day, meals in food.items() %}
+                    <li class="list-group-item">
+                        <strong>{{ day }}:</strong>
+                        <ul>
+                            {% for meal, foods in meals.items() %}
+                                {% if meal == 'Dinner' %}
+                                    {% for food in foods %}
+                                        <li>{{ food }}</li>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

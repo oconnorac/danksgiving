@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mt-4">Drinks Page</h2>
+    <p>Here are the drinks for the week:</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="list-group">
+                {% for day, drink_list in drinks.items() %}
+                    <li class="list-group-item">
+                        <strong>{{ day }}:</strong>
+                        <ul>
+                            {% for drink in drink_list %}
+                                <li>{{ drink }}</li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
